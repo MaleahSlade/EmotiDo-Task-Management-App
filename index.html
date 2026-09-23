@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" charset="utf-8"content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>EmotiDo: Manage Your Tasks. Mind Your Mood</title>
+</head>
+
+<body>
+<main>
+<fieldset class="outer-app">
+    <div id="title-text">
+  <h1>❤︎ ⋆.˚ ~ Emoti Do ~ ˚.⋆ ❤︎</h1>
+  <h2>Manage Your Tasks. Mind Your Mood.</h2>
+    </div>
+
+  <div id="tracker">
+  <form id="taskForm">
+    <label>
+      Task Name
+      <input type="text" id="taskName" placeholder="ex: ✴︎ fIgHt cRiM3 ✴︎" required />
+    </label>
+
+    <label>
+      Category
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="School">School</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+
+    <label>
+      Deadline
+      <input type="date" id="deadline" />
+    </label>
+
+    <label>
+      Status
+      <select id="taskStatus">
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </label>
+<label>
+    Feelings During Activity
+    <select id="feelings">
+      <option value="Neutral">Neutral</option>
+      <option value="Irritated">Irritated</option>
+      <option value="Motivated">Motivated</option>
+      <option value="Energetic">Energetic</option>
+      <option value="Blissful">Blissful</option>
+       <option value="Confused">Confused</option>
+      <option value="Enraged">Enraged</option>
+    </select>
+</label>
+    <button type="submit" id="submit">Add Task</button>
+  </form>
+
+  <!-- updateCounter() in script.js writes the totals here -->
+  <p id="taskCounter"></p>
+
+  <!-- Show only the tasks that match these choices -->
+  <div id="filters">
+    <label>
+      Filter by Status
+      <select id="filterStatus">
+        <option value="All">All</option>
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+    </label>
+
+    <label>
+      Filter by Category
+      <select id="filterCategory">
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="School">School</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+  </div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Category</th>
+        <th>Deadline</th>
+        <th>Status</th>
+        <th>Feelings</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="taskList">
+      <!-- Tasks get added here by JavaScript -->
+    </tbody>
+  </table>
+</div>
+  <button type="button" id="clearAll">Clear All Tasks</button>
+  </div>
+</fieldset>
+</main>
+
+</body>
+</html>
